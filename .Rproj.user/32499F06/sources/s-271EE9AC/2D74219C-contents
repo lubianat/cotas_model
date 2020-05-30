@@ -1,0 +1,102 @@
+---
+title: "modelo_simples_de_cotas"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+ O modelo detalhado aqui é um modelo linear simples para tentar levantar alguns pontos sobre a questão das cotas. 
+ 
+ Ele assume que o desempenho de um indivíduo em um exame geral (ex: ENEM) é proporcional a coeficientes que aumentam esse desempenho ao longo do tempo. 
+ 
+ 
+ O conceito de "desempenho" é uma abstração de resultados diversos. É uma simplificação. 
+ 
+ 
+ Vamos aos fatores que influenciam esse desempenho:
+ 
+ 1 - Tempo
+ 
+ Assumimos, nesse modelo, que quanto mais tempo, maior o desempenho de um aluno. Um aluno do 7º ano do Ensino Fundamental terá um desempenho menor agora do que quando estiver no 3º ano. 
+ 
+Assuminos também que o efeito do tempo no desempenho é linear com o tempo. 
+
+desempenho = alfa x tempo + beta
+
+Que é a forma do modelo linear. 
+
+Esse coeficiente alfa (o quanto o desempenho muda com o tempo) tem dois componentes:
+
+alfa_total = alfa_1 + alfa_2 
+
+* alfa 1, ou a ajuda do meio. 
+* alfa 2, ou a predisposição individual (facilidade escolar e empenho)
+ 
+ 
+ 2 - Alfa 1
+ 
+ O alfa 1 representa o quanto o meio permite o aluno desenvolver seu conhecimento. Condições de vidas precárias, por exemplo, e falta de acesso a recursos educacionais de qualidade, diminuem o alfa 1. Ou seja, ele está bem relacionado ao critério socio-econômico. 
+ 
+ Contudo, outros fatores afetam também esse desempenho. Por exemplo, o racismo estrutural pode contribuir para um menor desempenho. Por exemplo, ao pensarmos em profissões de alto desempenho acadêmico (direito, medicinha e engenharia, por exemplo), pensamos em pessoas brancas. 
+ 
+Isso pode se estender também a outros fatores, como recursos educacionais inacessíveis (por exemplo, cadeirantes e escolas/bibliotecas/museus sem acessibilidade).
+
+3 - Alfa 2
+ 
+O alfa 2 representa a predisposição individual, que é uma combinação de facilidade com as máterias e empenho. 
+Para o modelo, assumo (o que julgo coerente) que o alfa_1 (ou seja, as condições do meio) não influenciam essa predisposição. 
+
+Ela é considerada algo fixo de cada indivíduo. 
+De novo, é uma simplificação. 
+
+
+Dessa forma, o desempenho é dado pela equação:
+
+(alfa 1 + alfa 2) x tempo. 
+
+
+4 - O parâmetro Beta
+
+O parâmetro Beta é considerado 0 nesse modelo.
+
+As diferenças de "berço" são embutidas no alfa 1 (coeficiente de influência do meio).
+
+Ele faria sentido num contexto onde, por exemplo, os pais podem "comprar" desempenho. 
+Por exemplo, em universidades tradicionais americanas, filhos de alunos tem um "bônus" no processo seletivo, que independe do desenvolvimento. 
+
+Como estamos pensando no Brasil, isso não será considerado. 
+
+
+Vamos fazer um exemplo simples. 
+
+```{r cars}
+
+# Pessoa A é de classe média alta, estudou em colégio particular, branca
+
+Pessoa_A = list()
+
+
+# Pessoa B é de classe média baixa, estudou em colégio público, e é parda 
+Pessoa_B = list()
+
+
+# Pessoa C é de classe pobre, estudou em colégio público, e é parda 
+Pessoa_C = list()
+
+
+
+
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

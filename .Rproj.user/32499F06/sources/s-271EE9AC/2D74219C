@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1590793741516.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2779184809",
+    "id" : "2D74219C",
+    "lastKnownWriteTime" : 1590793752,
+    "last_content_update" : 1590795230893,
+    "path" : "~/Documents/cotas_modelo/modelo_simples_de_cotas.Rmd",
+    "project_path" : "modelo_simples_de_cotas.Rmd",
+    "properties" : {
+        "cursorPosition" : "77,17",
+        "scrollLine" : "64",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
